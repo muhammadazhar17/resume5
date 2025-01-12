@@ -1,0 +1,254 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.head {
+    margin-bottom: 41px;
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+h2 {
+    text-align: center;
+}
+
+label {
+    display: block;
+    margin: 25px 0 15px;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+}
+
+input[type="text"],
+input[type="email"],
+input[type="date"],
+textarea,
+select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #fe9a04;
+    box-sizing: border-box;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="date"],
+textarea,
+select:focus {
+    outline: none;
+}
+
+textarea {
+    resize: vertical;
+}
+
+input[type="submit"] {
+    background-color: #ff9500;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+input[type="submit"]:hover {
+    background-color: #f49a1d;
+}
+
+input:focus {
+    outline: none;
+}
+
+/* Landscape Resume Styles */
+.resume-cont {
+    width: 100%;
+    min-height: 100vh;
+    padding: 10px;
+    font-size: 1vw;
+    overflow: hidden; /* Prevent content overflow */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.resume-cont .center {
+    width: 90%;
+    min-height: 60vh;
+    display: flex;
+    flex-direction: row; /* Use horizontal space */
+    border: 5px solid #fe9a04;
+    overflow: hidden; /* Prevent overflow inside the container */
+}
+
+.center .main {
+    width: 30%; /* Use a smaller portion for the header */
+    background-image: linear-gradient(to bottom, #f83600 0%, #f9d423 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    padding: 20px;
+    flex-direction: column;
+    text-align: center;
+}
+
+.center .main .name {
+    font-size: 2vw;
+    text-transform: uppercase;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: lighter;
+    margin-bottom: 10px;
+}
+
+.center .main .occupation {
+    font-size: 1.8vw;
+    font-family: "Lavishly Yours";
+    text-transform: capitalize;
+}
+
+.center .resume-main {
+    display: flex;
+    flex-direction: row;
+    width: 70%;
+    padding: 20px;
+    gap: 20px;
+    overflow: hidden;
+}
+
+.center .resume-main .side1 {
+    width: 60%; /* More width for content */
+    padding: 10px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.center .resume-main .side2 {
+    width: 40%; /* Less width for the sidebar */
+    padding: 10px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+/* Adjustments for sections */
+.center .side1 .summery p,
+.center .side1 .experience .exp-info,
+.center .side1 .interest p {
+    color: rgb(56, 56, 56);
+    line-height: 1.5;
+    margin-top: 5px;
+}
+
+.center .side1 .experience .duration,
+.center .side1 .experience .jobrole,
+.center .side1 .experience .company,
+.center .side2 .education .higher-education,
+.center .side2 .education .institute,
+.center .side2 .education .complition {
+    color: rgb(122, 121, 121);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-transform: capitalize;
+    line-height: 1.3;
+}
+
+.center .side2 .contact .phone,
+.center .side2 .contact .email,
+.center .side2 .contact .alternate-email {
+    color: rgb(122, 121, 121);
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.center .side2 .contact .address {
+    color: rgb(56, 56, 56);
+    margin-top: 10px;
+    text-transform: capitalize;
+}
+
+.center .side2 .contact .contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+main .button {
+    width: 30%;
+    margin: 0 auto;
+    margin-left: 10px;
+    margin-top: 220px;
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+main .button button {
+    padding: 10px;
+    width: 100%;
+    font-size: 15px;
+    border: 2px solid #f49a1d;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    cursor: pointer;
+    background: white;
+}
+
+/* Media Queries */
+@media only screen and (max-width: 700px) {
+    .resume-cont .center {
+        flex-direction: column; /* Stack elements vertically on smaller screens */
+        width: 90%;
+    }
+
+    .center .resume-main {
+        flex-direction: column;
+        width: 100%;
+        padding: 10px;
+    }
+
+    .center .resume-main .side1,
+    .center .resume-main .side2 {
+        width: 100%;
+        padding: 5px;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .resume-cont .center {
+        width: 100%;
+    }
+
+    main .button {
+        width: 90%;
+    }
+}
+
+.print{
+    background-image: linear-gradient(to bottom, #f83600 0%, #f9d423 100%);
+
+}
+
+@media print {
+    #container {
+        display: none;
+    }
+
+    .resume-cont {
+        display: block;
+        page-break-before:avoid; 
+    }
+
+    .resume-cont  .button button {
+        display: none;
+    }
+}
